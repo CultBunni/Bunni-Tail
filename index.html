@@ -1,7 +1,7 @@
 
 <style>
 body {
-    background-color: pink;
+    background-color: #FFB2D2;
     color: pink;
     font-size: 30px;
     line-height: 30px;
@@ -13,11 +13,11 @@ body {
 <script>
 
 
-function createCheckbox (e) {
+function CreateGrayBunni (e) {
 const gifURL = `https://31.media.tumblr.com/76470f55efbc8cc7ec81778d18febc91/tumblr_mwn4rvyG4O1t2jjpjo1_500.gif`
 //https://64.media.tumblr.com/904cac3d751474ec777d681e5ece6b84/tumblr_mu0oqx9LIs1rkosd4o1_500.gif'
-const gifWidth = 1
-const gifHeight = 1
+const gifWidth = `.00001`
+const gifHeight = `.00001`
 
   //‹input›
   //box.type = 'checkbox' // <input type="checkbox>
@@ -27,32 +27,46 @@ const gifHeight = 1
   box.style.position = `absolute`
   box.style.left = `${e.x}px`
   box.style.top = `${e.y}px`
-  if (document.body.children.length > 666){
+  if (document.body.children.length > 60){
     const firstBox = document.body.children[0]
     firstBox.remove()
   }
   
   
-  function createCheckbox (e) {
-    const gifURL2 = `https://64.media.tumblr.com/904cac3d751474ec777d681e5ece6b84/tumblr_mu0oqx9LIs1rkosd4o1_500.gif`
-    const gifWidth = 1
-    const gifHeight = 1
-    //‹input›
-    //box.type = 'checkbox' // <input type="checkbox>
-    const box = document.createElement(`img`)
-    box.src = gifURL2
-    document.body.appendChild(box)
-    box.style.position = `absolute`
-  box.style.left = `${e.x}px`
-  box.style.top = `${e.y}px`
-  if (document.body.children.length > 666){
-    const firstBox = document.body.children[0]
-    firstBox.remove()
-  }
+  
   
   //console.log(e.y)
 }
-  window.addEventListener('mousemove', createCheckbox) 
+  window.addEventListener('mousemove', CreateGrayBunni) 
+  
+  
+  
+  
+function createPinkBunni (b) {
+const gifURL2 = `https://64.media.tumblr.com/904cac3d751474ec777d681e5ece6b84/tumblr_mu0oqx9LIs1rkosd4o1_500.gif`
+//h'
+const gifWidth = `.00001`
+const gifHeight = `.00001`
+
+  //‹input›
+  //box.type = 'checkbox' // <input type="checkbox>
+  const box = document.createElement(`img`)
+  box.src = gifURL2
+  document.body.appendChild(box)
+  box.style.position = `absolute`
+  box.style.left = `${b.x}px`
+  box.style.top = `${b.y}px`
+  if (document.body.children.length > 60){
+    const firstBox = document.body.children[0]
+    firstBox.remove()
+  }
+  
+  
+  
+  
+  //console.log(e.y)
+}
+  window.addEventListener(`click`, createPinkBunni) 
   
 </script>
 
