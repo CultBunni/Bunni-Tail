@@ -1,12 +1,48 @@
+
+<style>
+body {
+    background-color: pink;
+    color: pink;
+    font-size: 30px;
+    line-height: 30px;
+    word-wrap: anywhere;
+    font-family: "Noto Serif SC";
+  }
+</style>
+
 <script>
 
 
 function createCheckbox (e) {
+const gifURL = `https://31.media.tumblr.com/76470f55efbc8cc7ec81778d18febc91/tumblr_mwn4rvyG4O1t2jjpjo1_500.gif`
+//https://64.media.tumblr.com/904cac3d751474ec777d681e5ece6b84/tumblr_mu0oqx9LIs1rkosd4o1_500.gif'
+const gifWidth = 1
+const gifHeight = 1
 
-  const box = document.createElement ('input') //‹input›
-box.type = 'checkbox' // <input type="checkbox>
-document.body.appendChild(box)
+  //‹input›
+  //box.type = 'checkbox' // <input type="checkbox>
+  const box = document.createElement(`img`)
+  box.src = gifURL
+  document.body.appendChild(box)
   box.style.position = `absolute`
+  box.style.left = `${e.x}px`
+  box.style.top = `${e.y}px`
+  if (document.body.children.length > 666){
+    const firstBox = document.body.children[0]
+    firstBox.remove()
+  }
+  
+  
+  function createCheckbox (e) {
+    const gifURL2 = `https://64.media.tumblr.com/904cac3d751474ec777d681e5ece6b84/tumblr_mu0oqx9LIs1rkosd4o1_500.gif`
+    const gifWidth = 1
+    const gifHeight = 1
+    //‹input›
+    //box.type = 'checkbox' // <input type="checkbox>
+    const box = document.createElement(`img`)
+    box.src = gifURL2
+    document.body.appendChild(box)
+    box.style.position = `absolute`
   box.style.left = `${e.x}px`
   box.style.top = `${e.y}px`
   if (document.body.children.length > 666){
