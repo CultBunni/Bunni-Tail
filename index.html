@@ -9,9 +9,14 @@ document.body.appendChild(box)
   box.style.position = `absolute`
   box.style.left = `${e.x}px`
   box.style.top = `${e.y}px`
-  console.log(e.y)
+  if (document.body.children.length > 666){
+    const firstBox = document.body.children[0]
+    firstBox.remove()
+  }
+  
+  //console.log(e.y)
 }
-  window.addEventListener('click', createCheckbox) 
+  window.addEventListener('mousemove', createCheckbox) 
   
 </script>
 
